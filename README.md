@@ -1,68 +1,124 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌤️ Weather React App
 
-## Available Scripts
+A simple and responsive Weather App built with React.js that fetches real-time weather data using the WeatherAPI.com API.
 
-In the project directory, you can run:
+🚀 Features
 
-### `yarn start`
+Search for the weather by city name
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Displays:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Current temperature
 
-### `yarn test`
+Weather condition (e.g., Cloudy, Sunny, etc.)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Location and country
 
-### `yarn build`
+Current date
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dynamic background based on temperature (warm/cold)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Fully responsive and dark-themed UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Uses React Hooks (useState) for state management
 
-### `yarn eject`
+🧠 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Frontend: React.js (Create React App)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+API Provider: WeatherAPI.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Styling: CSS3 / Flexbox
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Build Tool: react-scripts
 
-## Learn More
+⚙️ Installation & Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1️⃣ Clone this repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+git clone https://github.com/your-username/weather-react-app.git
+cd weather-react-app
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+2️⃣ Install dependencies
 
-### Analyzing the Bundle Size
+npm install
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+3️⃣ Create .env file
+Create a file named .env in the root directory and add:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+REACT_APP_WEATHER_KEY=your_api_key_here
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+4️⃣ Start the development server
 
-### Deployment
+npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
+Then open:
+👉 http://localhost:3000
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+🌦️ API Reference
+
+Base URL:
+
+https://api.weatherapi.com/v1/
+
+
+Example Request:
+
+/current.json?key=YOUR_API_KEY&q=London&aqi=no
+
+
+Example Response:
+
+{
+  "location": {
+    "name": "London",
+    "country": "United Kingdom"
+  },
+  "current": {
+    "temp_c": 15.0,
+    "condition": { "text": "Partly cloudy" }
+  }
+}
+
+🧩 Folder Structure
+weather-react-app/
+│
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   ├── App.css
+│   └── components/
+│
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+
+🛠️ Build for Production
+
+To create a production build:
+
+npm run build
+
+
+This will generate an optimised/build folder ready to deploy.
+
+🔒 Security Note
+
+Never commit your .env file to GitHub.
+
+.gitignore already excludes it.
+
+Keep your API key private.
+
+🧑‍💻 Author
+
+M Suryaveera
+
+https://suryaveera-portfolio.netlify.app/
+
+
